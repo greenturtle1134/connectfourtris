@@ -1,0 +1,34 @@
+table {
+  margin: auto;
+}
+
+td.gameCell {
+  border: black;
+  border-style: solid;
+  border-width: thin;
+  width: 75px;
+  height: 75px;
+  padding: 0px;
+  background: white;
+}
+
+button.dropButton {
+  width: 100%;
+  height: 100%;
+}
+
+td.first {
+  background-color: red;
+}
+
+td.second {
+  background-color: blue;
+}
+
+button.first {
+  background-color: red;
+}
+
+button.second {
+  background-color: blue;
+}

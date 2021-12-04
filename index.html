@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/vue@next"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Connect Four Tetris</title>
+</head>
+
+<body>
+  <div id="app">
+    <table>
+      <tr>
+        <td v-for="i in board[0].length">
+          <button class="dropButton" v-on:click="drop(i-1)" v-bind:class="{first: first, second: !first}">Drop</button>
+        </td>
+      </tr>
+      <tr v-for="row in board">
+        <td v-for="cell in row" class="gameCell" v-bind:class="{first: cell==1, second: cell==2}"></td>
+      </tr>
+    </table>
+    <div style="text-align: center;">
+      <button v-on:click="reset(7,6)">Reset</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
